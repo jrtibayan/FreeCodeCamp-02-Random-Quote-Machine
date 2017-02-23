@@ -1,0 +1,168 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    background: white;
+    text-align: center;
+}
+
+main {
+    height: calc(100vh - 30px);
+    padding: 20px;
+}
+
+footer {
+    height: 30px;
+    font-size: 1.2em;
+}
+
+footer p {
+    line-height: 30px;
+}
+
+main .quote-box {
+    color: white;
+    background: black;
+    border-radius: 7px;
+    padding: 20px;
+    height: calc(100vh - 50px); /* less footer */
+}
+
+main .quote-text {
+    z-index:1;
+    background-color:rgba(39, 40, 34, 0.8);
+    font-size: 2em;
+    padding: 10px;
+
+    min-height: 20vh;
+    position: absolute;
+    width: calc(100vw - 80px); /* 2x20 padding on left and 2x20 on right */
+
+    display: table;
+}
+
+main .quote-text>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main .quote-photo {
+    margin-top: 10vh;
+    height: calc(80vh - 62px);
+    background: url("house03.png");
+    background-size: auto calc(80vh - 62px);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .quote-author {
+    z-index: 2;
+    height: 40px;
+    font-size: 1.2em;
+    line-height: 40px;
+
+    position: absolute;
+    bottom: 40px;
+    width: calc(100vw - 80px);
+}
+
+.btn, button {
+
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    height: 10vh;
+    width: 25vw;
+    max-width: 160px !important;
+    line-height: 30px;
+
+    font-size: 18px;
+
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+
+.twit {
+    position: absolute;
+    left: 0px;
+    bottom: 40px;
+    line-height: 10vh;
+}
+
+.random {
+    position: absolute;
+    right: 0px;
+    bottom: 40px;
+}
+
+
+@media screen and (orientation:landscape) {
+
+    main .quote-text,
+    main .quote-author{
+        float: left;
+    }
+
+    main .quote-photo {
+        margin: 0;
+        width: 50%;
+        height: calc(100vh - 90px);
+
+        background-size: auto calc(100vh - 90px);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        float: right;
+    }
+
+    main .quote-text {
+        height: 230px;
+        padding-bottom: 40px;
+        width: calc(50% - 40px);
+        top: calc(50% - 120px);
+        left: 40px;
+    }
+
+    main .quote-author {
+        width: calc(50% - 40px);
+        padding: 0 20px;
+
+        position: absolute;
+        top: calc(50vh + 60px);
+        left: 40px;
+        text-align: right;
+    }
+
+    .random {
+        position: fixed;
+        right: 40px;
+        top: 40px;
+    }
+
+    .twit {
+        position: fixed;
+        right: 40px;
+        top: calc(10vh + 60px);
+        left: auto;
+        text-align: center;
+    }
+
+    @media (max-height: 720px) {
+        main .quote-text {
+            font-size: 1.4em;
+        }
+    }
+}
+
+@media (min-width: 700px) and (min-height: 800px){
+    @media (orientation:portrait) {
+        main .quote-text {
+            font-size: 4em;
+        }
+    }
+}
