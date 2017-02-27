@@ -54,7 +54,7 @@ main .quote-text>div {
 main .quote-photo {
     margin-top: 10vh;
     height: calc(80vh - 62px);
-    background: url("house03.png");
+    background: url("../../assets/img/blank.jpg");
     background-size: auto calc(80vh - 62px);
     background-repeat: no-repeat;
     background-position: center;
@@ -84,6 +84,14 @@ main .quote-author {
 
     border: 1px solid white;
     border-radius: 4px;
+}
+
+.btn:focus, button:focus {
+    outline-color: transparent;
+}
+
+.btn:hover, button:hover {
+    box-shadow: 0 0 14px white;
 }
 
 

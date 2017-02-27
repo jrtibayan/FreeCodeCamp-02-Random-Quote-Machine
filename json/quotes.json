@@ -1,0 +1,51 @@
+[
+  {
+    "id": 0,
+    "imageLink": "house01.jpg",
+    "altText": "A photo of dotor House. ",
+    "quote": "If nobody hates you, <br>you're doing something wrong.",
+    "person": "House"
+  },
+  {
+    "id": 1,
+    "imageLink": "baelish01.jpg",
+    "altText": "A photo of Baelish of Game of Thrones.",
+    "quote": "Money buys a man's silence for a time. <br>A bolt in the heart buys it forever.",
+    "person": "Baelish"
+  },
+  {
+    "id": 2,
+    "imageLink": "barney01.jpg",
+    "altText": "Awesome photo of Barney.",
+    "quote": "When I'm sad I stop being sad <br>and be AWESOME instead.",
+    "person": "Barney"
+  },
+  {
+    "id": 3,
+    "imageLink": "yoda01.jpg",
+    "altText": "Photo of Yoda",
+    "quote": "Try not.<br>DO or do NOT, <br>There is no try.",
+    "person": "Yoda"
+  },
+  {
+    "id": 4,
+    "imageLink": "tyrion01.jpg",
+    "altText": "Tyrion's photo of Game of Thrones",
+    "quote": "That's what I do. <br>I drink and <br>I know things.",
+    "person": "Tyrion"
+  },
+  {
+    "id": 5,
+    "imageLink": "sheldon01.jpg",
+    "altText": "Dr Sheldon Cooper's photo.",
+    "quote": "I'm not crazy! <br>My mother had me tested.",
+    "person": "Sheldon"
+  },
+  {
+    "id": 6,
+    "imageLink": "house01.jpg",
+    "altText": "A photo of dotor House. ",
+    "quote": "If you talk to GOD youre religious. <br>If GOD talks to you, youre psychotic.",
+    "person": "House"
+  }
+]
