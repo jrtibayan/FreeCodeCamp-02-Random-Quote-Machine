@@ -207,6 +207,7 @@ main .quote-author {
         main .quote-text {
             font-size: 1.4em;
             max-height: calc(100vh - 8000px);
+            background: red;
         }
     }
 }
