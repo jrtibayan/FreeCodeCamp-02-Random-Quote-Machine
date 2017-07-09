@@ -28,42 +28,49 @@ var pickQuote = function () {
         lastIndex = selectedIndex;
         selectedQuote = JSON.parse(JSON.stringify(json[selectedIndex]));
 
-        /* quote */
-        $(".quote").animate(
-            {opacity: 0},
-            500,
-            function() {
-                $(this).animate(
-                    {opacity: 1},
-                    500
-                );
-                $(".quote").html('<i class="fa fa-quote-left"> </i>&nbsp;' + selectedQuote.quote);
-            }
-        );
+        /* hide quote */
+        $(".quote-text").animate({opacity: 0}, 500);
 
-        /* image */
-        $(".quote-photo").animate(
-            {opacity: 0},
-            500,
-            function() {
-                $(this).animate(
-                    {opacity: 1},
-                    500
-                );
-                $(".quote-photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
-            }
-        );
+        /* hide image */
+        $(".quote-photo").animate({opacity: 0}, 500);
 
-        $(".name").animate(
-            {opacity: 0},
+        /* hide person */
+        $(".name").animate({opacity: 0}, 500);
+
+        /* display loading */
+        $('.spinner-container').css('display', 'flex');
+        $('.spinner-container').animate(
+            {opacity: 1},
             500,
             function() {
-                $(this).animate(
-                    {opacity: 1},
-                    500
-                );
-                /* person */
-                $(".name").html("- " + selectedQuote.person);
+
+                var img = new Image();
+                // this will be triggered after the image is successfully loaded
+                img.onload = function() {
+
+                    $('.spinner-container').animate(
+                        {opacity: 0},
+                        500,
+                        function() {
+                            // remove the loading div
+                            $('.spinner-container').css('display', 'none');
+
+                            // show photo
+                            $(".quote-photo").animate({opacity: 1}, 500);
+                            $(".quote-photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
+
+                            // show name
+                            $(".name").animate({opacity: 1}, 500);
+                            $(".name").html("- " + selectedQuote.person);
+
+                            // show quote
+                            $(".quote-text").animate({opacity: 1}, 500);
+                            $(".quote").html('<i class="fa fa-quote-left"> </i>&nbsp;' + selectedQuote.quote);
+                        }
+                    );
+                };
+                // after showing loading div load the image
+                img.src = 'assets/img/' + selectedQuote.imageLink;
             }
         );
     });

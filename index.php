@@ -40,8 +40,14 @@
                     <button class="btn random">Random</button>
                     <p class="name">&nbsp;</p>
                 </div>
-
             </div>
+
+            <div class="spinner-container">
+                <div class="loader">
+                    <div class="loading-text">Loading</div>
+                </div>
+            </div>
+
         </main>
 
         <footer>
