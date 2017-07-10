@@ -9,6 +9,8 @@
         <meta property="og:description" content="This page picks a random quote that is stored in a json file. There are 7 quotes available at the moment for testing purposes only." />
         <meta property="og:image" content="http://jrtibayan.github.io/FreeCodeCamp-02-Random-Quote-Machine/assets/img/placeit.jpg" />
 
+        <link rel="stylesheet" href="assets/css/normalize.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="assets/css/style.css">
