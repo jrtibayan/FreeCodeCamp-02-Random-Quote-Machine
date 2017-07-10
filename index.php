@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="quote-author">
-                    <div class="twit btn">
+                    <div class="btn twit">
                         <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
                     </div>
                     <button class="btn random">Random</button>

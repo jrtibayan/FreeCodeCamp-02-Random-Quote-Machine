@@ -1,15 +1,93 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body {
-    background: red;
+    background: #000;
+    font-size: 16px;
+}
+
+.btn, button {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    height: 10vh;
+    width: 25vw;
+    max-width: 160px !important;
+    line-height: 30px;
+
+    font-size: 18px;
+
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.btn:focus, button:focus {
+    outline-color: transparent;
+}
+
+.btn:hover, button:hover {
+    box-shadow: 0 0 14px white;
+}
+
+.quote-photo {
+    background: #000;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50vw;
 }
 
 .quote-text {
     background-color:rgba(39, 40, 34, 0.8);
+    display: table;
+    color: #fff;
+    font-size: 1.7em;
+    left: 0;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top: 0;
 }
 
+main .quote-text>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.name {
+    color: #fff;
+    width: 50vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding: 0 20px 20px 0;
+    margin:0;
+}
+
+
 @media screen and (orientation:landscape) {
+    .btn.twit {
+        position: fixed;
+        right: 20px;
+        top: 20;
+    }
+    .btn.random {
+        position: fixed;
+        right: 20px;
+        top: 60px;
+    }
     .quote-text {
+        height: calc(100vh);
         width: 50vw;
-        height: 100vh;
+    }
+
+    .quote-photo {
+        background-size: auto calc(100vh);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
