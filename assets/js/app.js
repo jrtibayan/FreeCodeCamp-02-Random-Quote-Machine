@@ -32,7 +32,7 @@ var pickQuote = function () {
         $(".quote-text").animate({opacity: 0}, 500);
 
         /* hide image */
-        $(".quote-photo").animate({opacity: 0}, 500);
+        $(".photo").animate({opacity: 0}, 500);
 
         /* hide person */
         $(".name").animate({opacity: 0}, 500);
@@ -56,8 +56,8 @@ var pickQuote = function () {
                             $('.spinner-container').css('display', 'none');
 
                             // show photo
-                            $(".quote-photo").animate({opacity: 1}, 500);
-                            $(".quote-photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
+                            $(".photo").animate({opacity: 1}, 500);
+                            $(".photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
 
                             // show name
                             $(".name").animate({opacity: 1}, 500);

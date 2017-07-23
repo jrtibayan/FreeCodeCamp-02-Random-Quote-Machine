@@ -19,41 +19,39 @@
     <body>
 
         <main>
-            <div class="container quote-box">
-
-                <div class="quote-text">
-                    <div class="disp-table">
-                        <div>
-                            <p class="disp-table-cell quote">
-                                &nbsp;
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quote-photo">
-                        &nbsp;
-                </div>
-
-                <div class="quote-author">
-                    <div class="btn twit">
-                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                    </div>
-                    <button class="btn random">Random</button>
+            <!-- QUOTE & CHARACTER-->
+            <div class="quote-container Aligner">
+                <div class="Aligner-item Aligner-item--top"></div>
+                <div class="quote-with-name Aligner-item">
+                    <p class="quote">&nbsp;</p>
                     <p class="name">&nbsp;</p>
                 </div>
+                <div class="Aligner-item Aligner-item--bottom"></div>
             </div>
+
+            <!-- PHOTO -->
+            <div class="photo">&nbsp;</div>
+
+            <!-- BUTTONS -->
+            <div>
+                <div class="btn twit">
+                    <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </div>
+                <button class="btn random">Random</button>
+            </div>
+
+        </main>
+        <footer class="app-info">
+        <div class="container quote-box">
 
             <div class="spinner-container">
                 <div class="loader">
                     <div class="loading-text">Loading</div>
                 </div>
             </div>
-
-        </main>
-
-        <footer>
-            <p>by <em><a href="#">Jeric Tibayan</a></em></p>
+            <p>Designed and Developed with Love</p>
+            <p>by Jeric Tibayan</p>
+            <p>Check my profile on <a href="www.jeric.rocks">www.jeric.rocks</a></p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

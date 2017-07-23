@@ -3,15 +3,152 @@
 }
 
 body {
-    background: #000;
+    background: #fff;
+    color: #fff;
     font-size: 16px;
 }
+
+.btn, button {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 20px 0 0;
+    text-align: center;
+    width: 100px;
+
+    position: absolute;
+    right: 20px;
+}
+
+.btn:focus, button:focus {
+    outline-color: transparent;
+}
+
+.btn:hover, button:hover {
+    box-shadow: 0 0 14px white;
+}
+
+.btn.random {
+    top: 20px;
+}
+
+.btn.twit {
+    top: 70px;
+}
+
+main {
+    background: #000;
+    border-radius: 4px;
+    display: flex;
+    height: calc(100vh - 60px);
+    margin: 20px 20px 0 20px;
+    overflow: hidden;
+    width: calc(100vw - 40px);
+}
+
+.quote-container, .photo {
+    flex: 1;
+    height: 100%;
+}
+
+.quote-container {
+    margin-left: 20px;
+}
+
+.quote-with-name {
+    max-height: calc(100vh - 100px);
+    background-color: rgba(39, 40, 34, 0.8);
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.quote-with-name p{
+    margin: 0;
+}
+
+.quote-with-name .name{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.photo {
+    background: #000;
+    background-size: auto calc(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+footer {
+    margin: 0;
+    background: #fff;
+    height: 40px;
+}
+
+footer * {
+    display: none;
+    margin: 0;
+}
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    justify-content: center;
+}
+
+.Aligner-item {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+    max-width: 0;
+    margin: 0;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+    max-width: 0;
+    margin: 0;
+}
+
+.Aligner-item--fixed {
+    flex: none;
+    max-width: 50%;
+    margin: 0;
+}
+
+@media screen and (orientation:portrait) {
+    .quote-container, .photo {
+        position: absolute;
+        display: block;
+        width: 100%;
+    }
+    .quote-container {
+        top:0;
+    }
+    .photo {
+        bottom: 0;
+        height: 80%;
+    }
+}
+
+
+/*
 
 .btn, button {
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.7);
-    height: 10vh;
+    height: 15vh;
+    line-height: 15vh;
     width: 25vw;
     max-width: 160px !important;
     line-height: 30px;
@@ -31,7 +168,7 @@ body {
 }
 
 .quote-photo {
-    background: #000;
+
     height: 100vh;
     position: fixed;
     right: 0;
@@ -41,19 +178,14 @@ body {
 
 .quote-text {
     background-color:rgba(39, 40, 34, 0.8);
-    display: table;
+    margin: 20px 0 20px 20px;
     color: #fff;
     font-size: 1.7em;
     left: 0;
     padding: 20px;
-    position: fixed;
+    position: absolute;
     text-align: center;
     top: 0;
-}
-
-main .quote-text>div {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .name {
@@ -67,20 +199,27 @@ main .quote-text>div {
     margin:0;
 }
 
+.app-info {
+    display: none;
+    color: red;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+}
 
 @media screen and (orientation:landscape) {
     .btn.twit {
         position: fixed;
         right: 20px;
-        top: 20;
+        bottom: 20px;
     }
     .btn.random {
         position: fixed;
         right: 20px;
-        top: 60px;
+        bottom: calc(15vh + 40px);
     }
     .quote-text {
-        height: calc(100vh);
+        max-height: calc(100vh - 40px);
         width: 50vw;
     }
 
@@ -90,7 +229,7 @@ main .quote-text>div {
         background-position: center;
     }
 }
-
+*/
 
 
 /*
