@@ -39,19 +39,22 @@
                 </div>
                 <button class="btn random">Random</button>
             </div>
-
         </main>
-        <footer class="app-info">
-        <div class="container quote-box">
 
-            <div class="spinner-container">
-                <div class="loader">
-                    <div class="loading-text">Loading</div>
-                </div>
+
+        <div class="spinner-container">
+            <div class="loader">
+                <div class="loading-text">Loading</div>
             </div>
+        </div>
+
+
+        <footer class="app-info">
+
             <p>Designed and Developed with Love</p>
             <p>by Jeric Tibayan</p>
             <p>Check my profile on <a href="www.jeric.rocks">www.jeric.rocks</a></p>
+            -->
         </footer>
 
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
