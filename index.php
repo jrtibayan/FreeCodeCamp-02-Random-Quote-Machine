@@ -23,7 +23,7 @@
             <div class="quote-container Aligner">
                 <div class="Aligner-item Aligner-item--top"></div>
                 <div class="quote-with-name Aligner-item">
-                    <p class="quote">&nbsp;</p>
+                    <q class="quote">&nbsp;</q>
                     <p class="name">&nbsp;</p>
                 </div>
                 <div class="Aligner-item Aligner-item--bottom"></div>
@@ -50,11 +50,7 @@
 
 
         <footer class="app-info">
-
-            <p>Designed and Developed with Love</p>
-            <p>by Jeric Tibayan</p>
-            <p>Check my profile on <a href="www.jeric.rocks">www.jeric.rocks</a></p>
-            -->
+            <p>by <a href="http://www.jeric.rocks">Jeric Tibayan</a> | For more info <span>Click Me</span></p>
         </footer>
 
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

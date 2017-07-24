@@ -4,12 +4,11 @@
 
 body {
     background: #fff;
-    color: #fff;
+    color: #2f2f2f;
     font-size: 16px;
 }
 
 .btn, button {
-    z-index: 99;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid white;
     border-radius: 4px;
@@ -17,12 +16,13 @@ body {
     font-size: 1em;
     height: 40px;
     line-height: 40px;
-    margin: 20px 20px 0 0;
+    margin: 0;
     text-align: center;
     width: 100px;
+    z-index: 99;
 
     position: absolute;
-    right: 20px;
+    right: 40px;
 }
 
 .btn:focus, button:focus {
@@ -34,16 +34,17 @@ body {
 }
 
 .btn.random {
-    top: 20px;
+    top: 40px;
 }
 
 .btn.twit {
-    top: 70px;
+    top: 90px;
 }
 
 main {
     background: #000;
     border-radius: 4px;
+    color: #fff;
     display: flex;
     height: calc(100vh - 60px);
     margin: 20px 20px 0 20px;
@@ -57,106 +58,111 @@ main {
 }
 
 .quote-container {
-    z-index: 1;
     margin-left: 20px;
+    z-index: 1;
 }
 
 .quote-with-name {
-    max-height: calc(100vh - 100px);
     background-color: rgba(39, 40, 34, 0.8);
-    padding: 20px;
     font-size: 1.2em;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    padding: 20px;
 }
 
-.quote-with-name p{
+.quote-with-name p, .quote-with-name q{
     margin: 0;
 }
 
+q:before,q:after {
+    content: '';
+}
+
 .quote-with-name .name{
-    text-align: right;
     margin-top: 20px;
+    text-align: right;
 }
 
 .photo {
-    z-index: 0;
     background: #000;
     background-size: auto calc(100%);
     background-repeat: no-repeat;
     background-position: center;
-
+    z-index: 0;
 }
 
 footer {
-    margin: 0;
-    background: #fff;
+    font-size: .9em;
     height: 40px;
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
 }
 
-footer * {
-    display: none;
+footer p {
     margin: 0;
 }
 
 .Aligner {
-    display: flex;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    display: flex;
     justify-content: center;
+    min-height: calc(100vh - 60px);
 }
 
 .Aligner-item {
     flex: 1;
-    text-align: center;
     margin: 0;
+    text-align: center;
 }
 
 .Aligner-item--top {
     align-self: flex-start;
-    max-width: 0;
     margin: 0;
+    max-width: 0;
 }
 
 .Aligner-item--bottom {
     align-self: flex-end;
-    max-width: 0;
     margin: 0;
+    max-width: 0;
 }
 
 .Aligner-item--fixed {
     flex: none;
-    max-width: 50%;
     margin: 0;
+    max-width: 50%;
 }
 
+
+
+
 @media screen and (orientation:portrait) {
+
     main {
         display: block;
         position: relative;
     }
 
-    .quote-container, .photo {
-
-    }
     .quote-container {
-        position: relative;
-        height: auto;
-        min-height: 0;
         display: block;
+        height: auto;
         margin: 20px;
+        min-height: 0;
+        position: relative;
     }
 
     .photo {
+        width: 100%;
+
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
-        width: 100%;
     }
 
     .btn.twit, .btn.random {
-        margin: 0;
         bottom: 20px;
-        top: unset;
+        top: auto;
     }
 
     .btn.twit {
@@ -166,15 +172,13 @@ footer * {
     .btn.random {
         right: 20px;
     }
-
-
 }
 
 .spinner-container {
     color: #fff;
     background: #000;
     opacity: 1;
-    border-radius: 7px;
+    border-radius: 4px;
 
     position: fixed;
     top: 0;
@@ -191,8 +195,8 @@ footer * {
 }
 
 .loader {
-    border: 16px solid #f3f3f3; // Light grey
-    border-top: 16px solid #3498db; // Blue
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -213,276 +217,3 @@ footer * {
     70% { transform: rotate(120deg); }
     100% { transform: rotate(360deg); }
 }
-
-
-/*
-
-.btn, button {
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    height: 15vh;
-    line-height: 15vh;
-    width: 25vw;
-    max-width: 160px !important;
-    line-height: 30px;
-
-    font-size: 18px;
-
-    border: 1px solid white;
-    border-radius: 4px;
-}
-
-.btn:focus, button:focus {
-    outline-color: transparent;
-}
-
-.btn:hover, button:hover {
-    box-shadow: 0 0 14px white;
-}
-
-.quote-photo {
-
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 50vw;
-}
-
-.quote-text {
-    background-color:rgba(39, 40, 34, 0.8);
-    margin: 20px 0 20px 20px;
-    color: #fff;
-    font-size: 1.7em;
-    left: 0;
-    padding: 20px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-}
-
-.name {
-    color: #fff;
-    width: 50vw;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: right;
-    padding: 0 20px 20px 0;
-    margin:0;
-}
-
-.app-info {
-    display: none;
-    color: red;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999;
-}
-
-@media screen and (orientation:landscape) {
-    .btn.twit {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-    }
-    .btn.random {
-        position: fixed;
-        right: 20px;
-        bottom: calc(15vh + 40px);
-    }
-    .quote-text {
-        max-height: calc(100vh - 40px);
-        width: 50vw;
-    }
-
-    .quote-photo {
-        background-size: auto calc(100vh);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
-*/
-
-
-/*
-*, *:before, *:after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-size: 16px;
-    background: white;
-    text-align: center;
-}
-
-main {
-    height: calc(100vh - 30px);
-    padding: 20px;
-}
-
-footer {
-    height: 30px;
-    font-size: 1.2em;
-}
-
-footer p {
-    line-height: 30px;
-}
-
-main .quote-box {
-    color: white;
-    background: black;
-    border-radius: 7px;
-    padding: 20px;
-    height: calc(100vh - 50px);
-}
-
-main .quote-text {
-    z-index:1;
-    background-color:rgba(39, 40, 34, 0.8);
-    font-size: 2em;
-    padding: 10px;
-
-    min-height: 20vh;
-    position: absolute;
-    width: calc(100vw - 80px);
-
-    display: table;
-}
-
-main .quote-text>div {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-main .quote-photo {
-    margin-top: 10vh;
-    height: calc(80vh - 62px);
-    background: url("../../assets/img/blank.jpg");
-    background-size: auto calc(80vh - 62px);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-main .quote-author {
-    z-index: 2;
-    height: 40px;
-    font-size: 1.2em;
-    line-height: 40px;
-
-    position: absolute;
-    bottom: 40px;
-    width: calc(100vw - 80px);
-}
-
-.btn, button {
-
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    height: 10vh;
-    width: 25vw;
-    max-width: 160px !important;
-    line-height: 30px;
-
-    font-size: 18px;
-
-    border: 1px solid white;
-    border-radius: 4px;
-}
-
-.btn:focus, button:focus {
-    outline-color: transparent;
-}
-
-.btn:hover, button:hover {
-    box-shadow: 0 0 14px white;
-}
-
-
-.twit {
-    position: absolute;
-    left: 0px;
-    bottom: 40px;
-    line-height: 10vh;
-}
-
-.random {
-    position: absolute;
-    right: 0px;
-    bottom: 40px;
-}
-
-
-
-@media screen and (orientation:landscape) {
-
-    main .quote-text,
-    main .quote-author{
-        float: left;
-    }
-
-    main .quote-photo {
-        margin: 0;
-        width: 50%;
-        height: calc(100vh - 90px);
-
-        background-size: auto calc(100vh - 90px);
-        background-repeat: no-repeat;
-        background-position: center;
-
-        float: right;
-    }
-
-    main .quote-text {
-        height: 230px;
-        padding-bottom: 40px;
-        width: calc(50% - 40px);
-        top: calc(50% - 120px);
-        left: 40px;
-    }
-
-    main .quote-author {
-        width: calc(50% - 40px);
-        padding: 0 20px;
-
-        position: absolute;
-        top: calc(50vh + 60px);
-        left: 40px;
-        text-align: right;
-    }
-
-    .random {
-        position: fixed;
-        right: 40px;
-        top: 40px;
-    }
-
-    .twit {
-        position: fixed;
-        right: 40px;
-        top: calc(10vh + 60px);
-        left: auto;
-        text-align: center;
-    }
-
-    @media (max-height: 720px) {
-        main .quote-text {
-            font-size: 1.4em;
-            max-height: calc(100vh - 8000px);
-            background: red;
-        }
-    }
-}
-
-@media (min-width: 700px) and (min-height: 800px){
-    @media (orientation:portrait) {
-        main .quote-text {
-            font-size: 4em;
-        }
-    }
-}
-*/
