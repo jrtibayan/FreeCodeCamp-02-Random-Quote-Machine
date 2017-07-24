@@ -47,25 +47,24 @@ var pickQuote = function () {
                 var img = new Image();
                 // this will be triggered after the image is successfully loaded
                 img.onload = function() {
+                    // show photo
+                    $(".photo").animate({opacity: 1}, 500);
+                    $(".photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
 
+                    // show name
+                    $(".name").animate({opacity: 1}, 500);
+                    $(".name").html("- " + selectedQuote.person);
+
+                    // show quote
+                    $(".quote-text").animate({opacity: 1}, 500);
+                    $(".quote").html('<i class="fa fa-quote-left"> </i>&nbsp;' + selectedQuote.quote);
+
+                    // remove the loading div
                     $('.spinner-container').animate(
                         {opacity: 0},
                         500,
                         function() {
-                            // remove the loading div
                             $('.spinner-container').css('display', 'none');
-
-                            // show photo
-                            $(".photo").animate({opacity: 1}, 500);
-                            $(".photo").css("background-image",'url("assets/img/' + selectedQuote.imageLink + '")');
-
-                            // show name
-                            $(".name").animate({opacity: 1}, 500);
-                            $(".name").html("- " + selectedQuote.person);
-
-                            // show quote
-                            $(".quote-text").animate({opacity: 1}, 500);
-                            $(".quote").html('<i class="fa fa-quote-left"> </i>&nbsp;' + selectedQuote.quote);
                         }
                     );
                 };
