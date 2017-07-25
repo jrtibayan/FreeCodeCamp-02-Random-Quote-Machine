@@ -6,6 +6,8 @@ body {
     background: #fff;
     color: #2f2f2f;
     font-size: 16px;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .btn, button {
@@ -20,9 +22,6 @@ body {
     text-align: center;
     width: 100px;
     z-index: 99;
-
-    position: absolute;
-    right: 40px;
 }
 
 .btn:focus, button:focus {
@@ -31,6 +30,11 @@ body {
 
 .btn:hover, button:hover {
     box-shadow: 0 0 14px white;
+}
+
+.btn.random, .btn.twit {
+    position: absolute;
+    right: 40px;
 }
 
 .btn.random {
@@ -97,6 +101,15 @@ footer {
     line-height: 40px;
     margin: 0;
     text-align: center;
+}
+
+footer button {
+    background: #fff;
+    border-color: #2f2f2f;;
+    color: #2f2f2f;;
+    height: 25px;
+    line-height: 20px;
+    width: auto;
 }
 
 footer p {
@@ -216,4 +229,31 @@ footer p {
     0% { transform: rotate(45deg); }
     70% { transform: rotate(120deg); }
     100% { transform: rotate(360deg); }
+}
+
+.more-info {
+    background: #dddddd;
+    height: 100vh;
+    overflow: auto;
+    padding: 20px;
+    width: 100vw;
+    z-index: 999;
+
+    position: absolute;
+    top: 100vh;
+    left: 0;
+}
+
+.more-info .container{
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.close-btn {
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+form input, form .btn, form textarea{
+    width: 100%;
 }

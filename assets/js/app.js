@@ -3,12 +3,8 @@ var selectedIndex=0;
 var selectedQuote = {};
 
 function inIframe () {
-    try {
-        return window.self !== window.top;
-    }
-    catch (e) {
-        return true;
-    }
+    try { return window.self !== window.top; }
+    catch (e) { return true; }
 }
 
 function openURL(url){
@@ -77,17 +73,35 @@ var pickQuote = function () {
 
 $(document).ready(function() {
 
+    // picks the first quote to display after load
     pickQuote();
 
+
+    // if random button is clicked pick a new quote
     $(".random").on("click", function(){
         pickQuote();
     });
 
+    // tweet the displayed quote
     $('.twit').on('click', function() {
-
         if(!inIframe()) {
             openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' +  selectedQuote.quote.replace(/<\/?[^>]+(>|$)/g, "") + '" ' + "- " +selectedQuote.person));
         }
     });
 
+    // show the info section
+    $('.more-info-btn').click(function() {
+        $(".more-info").animate({top: 0}, 500);
+    });
+
+    // close the info section
+    $('.close-btn').click(function() {
+        console.log('hello');
+        $(".more-info").animate({opacity: 0}, 500, function() {
+            $('.more-info').css('opacity', '1');
+            $('.more-info').css('top', '100vh');
+        });
+    });
+
 });
+

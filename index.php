@@ -50,8 +50,33 @@
 
 
         <footer class="app-info">
-            <p>by <a href="http://www.jeric.rocks">Jeric Tibayan</a> | For more info <span>Click Me</span></p>
+            <p>by <a href="http://www.jeric.rocks">Jeric Tibayan</a> | For more info <button class="more-info-btn">Click Me!</button></p>
         </footer>
+
+
+        <div class="more-info">
+            <div class="container">
+                <h3>About this APP</h3>
+                <p>This app is the 3rd project and a requirement for the Free Code Camp FRONT END Developer Certificate.</p>
+                <p>This app retrieves quotes from a JSON file and will randomly pick a quote from it to be displayed. If the quote picked is the same as previous one, it will pick another till it gets a different one.</p>
+                <h3>What I Used For This Project</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>JQuery</li>
+                </ul>
+                <p>PS: For now the app only contains 7 quotes so you'll feel quotes are a little bit repetitive. Adding more quotes will solve this problem but instead of searching more of the quotes to add, I decided to leave it as is for now and continue learning.</p>
+                <p>You may suggest a quote from your favorite tv/movie character by filling out the form below.</p>
+                <h3>Suggest A Quote</h3>
+                <form method="POST" action="https://formspree.io/jeric_tibayan-webdev@yahoo.com">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <textarea rows="5" name="quote" id="quote" placeholder="Quote"></textarea>
+                    <input type="submit" class="btn">
+                </form>
+                <button class="close-btn">CLOSE</button>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="assets/js/app.js"></script>
