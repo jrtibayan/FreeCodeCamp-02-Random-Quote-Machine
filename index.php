@@ -74,7 +74,7 @@
                     <li>JavaScript</li>
                     <li>JQuery</li>
                 </ul>
-                <p>PS: For now the app only contains 7 quotes so you'll feel quotes are a little bit repetitive. Adding more quotes will solve this problem but instead of searching more of the quotes to add, I decided to leave it as is for now and continue learning.</p>
+                <p>PS: For now the app only contains 7 quotes so you'll feel quotes are a little bit repetitive. Adding more quotes will solve this problem but instead of searching for more quotes to add, I decided to leave it as is for now and continue learning.</p>
                 <p>You may suggest a quote from your favorite tv/movie character by filling out the form below.</p>
                 <h3>Suggest A Quote</h3>
                 <form method="POST" action="https://formspree.io/jeric_tibayan-webdev@yahoo.com">
