@@ -59,6 +59,14 @@
                 <h3>About this APP</h3>
                 <p>This app is the 3rd project and a requirement for the Free Code Camp FRONT END Developer Certificate.</p>
                 <p>This app retrieves quotes from a JSON file and will randomly pick a quote from it to be displayed. If the quote picked is the same as previous one, it will pick another till it gets a different one.</p>
+                <p>This app passed Googles Mobile-Friendly Test and the W3C CSS3 Validation</p>
+                <p>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="Valid CSS!" />
+                    </a>
+                </p>
                 <h3>What I Used For This Project</h3>
                 <ul>
                     <li>HTML5</li>
