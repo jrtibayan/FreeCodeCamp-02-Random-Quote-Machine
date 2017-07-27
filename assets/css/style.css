@@ -233,6 +233,7 @@ footer p {
 
 .more-info {
     background: #dddddd;
+    display: none;
     height: 100vh;
     overflow: auto;
     padding: 20px;
