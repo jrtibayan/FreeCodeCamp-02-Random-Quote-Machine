@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Random Quote App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta property="og:title" content="Random Quote Picker by JericT" />

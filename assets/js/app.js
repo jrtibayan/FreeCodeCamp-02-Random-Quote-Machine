@@ -91,6 +91,7 @@ $(document).ready(function() {
 
     // show the info section
     $('.more-info-btn').click(function() {
+        $('.more-info').css('display', 'block');
         $(".more-info").animate({top: 0}, 500);
     });
 
@@ -100,6 +101,7 @@ $(document).ready(function() {
         $(".more-info").animate({opacity: 0}, 500, function() {
             $('.more-info').css('opacity', '1');
             $('.more-info').css('top', '100vh');
+            $('.more-info').css('display', 'none');
         });
     });
 
